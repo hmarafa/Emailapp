@@ -16,6 +16,9 @@ class RootTVC: UITableViewController {
     
     var emails = [Email]()
     var delegate: CellSelectedDelegate?
+    var num: String = ""
+    var dataDictionary1: [String:Array<Email>] = [:]
+    var deletedEmail = [Email]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
