@@ -19,16 +19,24 @@ class RootTVC: UITableViewController {
     var num: String = ""
     var dataDictionary1: [String:Array<Email>] = [:]
     var deletedEmail = [Email]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let actionbutton = UIBarButtonItem()
+        
+        if num == "Inbox" {
+            self.navigationItem.rightBarButtonItem = self.editButtonItem
+        }
+        
+        if num == "Sent" {
+            actionbutton.title = "+"
+            self.navigationItem.rightBarButtonItem = actionbutton
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
