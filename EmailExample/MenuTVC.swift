@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuTVC: UITableViewController {
-    
+    var delegate: CellSelectedDelegate?
     var dataDictionary: [String:Array<Email>] = [:]
     var selectedRow = ""
 
