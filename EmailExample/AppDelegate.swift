@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rootTVC.emails.append(Email(sender: "alert@asu.edu", subject: "Bees", contents: "Hi help me please there are bees"))
         */
         
-        
-        menuTVC.delegate = detailVC
+       // let detailVC
+        menuTVC.CellSelectedDelegate = detailVC
 
         
     return true

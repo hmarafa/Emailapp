@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuTVC: UITableViewController {
-    var delegate: CellSelectedDelegate?
+    var CellSelectedDelegate: CellSelectedDelegate?
     var dataDictionary: [String:Array<Email>] = [:]
     var selectedRow = ""
 
@@ -112,6 +112,7 @@ class MenuTVC: UITableViewController {
         
         let destVC = segue.destination as! RootTVC
         destVC.emails = layer.dataDictionary[selectedRow]!
+        destVC.delegate = self.CellSelectedDelegate
         destVC.num = selectedRow
         destVC.dataDictionary1 = layer.dataDictionary
         //1. which button got pressed
